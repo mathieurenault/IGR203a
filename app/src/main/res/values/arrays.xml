@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<resources>
+    <string-array name="entreeList">
+        <item>Entrée 1</item>
+        <item>Entrée 2</item>
+        <item>Entrée 3</item>
+        <item>Entrée 4</item>
+
+    </string-array>
+
+    <string-array name="platList">
+        <item>Plat 1</item>
+        <item>Plat 2</item>
+        <item>Plat 3</item>
+        <item>Plat 4</item>
+        <item>BOEUF BOURGUIGNON</item>
+        <item>Giano</item>
+        <item>Soeur de Prush</item>
+        <item>Oeuf</item>
+        <item>Plat</item>
+        <item>Platte</item>
+        <item>Plat Platte</item>
+
+    </string-array>
+
+    <string-array name="dessertList">
+        <item>Dessert 1</item>
+        <item>Dessert 2</item>
+        <item>Dessert 3</item>
+        <item>Dessert 4</item>
+
+    </string-array>
+
+    <string-array name="boissonList">
+        <item>Boisson 1</item>
+        <item>Boisson 2</item>
+        <item>Boisson 3</item>
+        <item>Boisson 4</item>
+
+    </string-array>
+</resources>

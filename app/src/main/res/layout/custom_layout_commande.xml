@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="match_parent"
+    >
+
+    <TextView
+        android:id="@+id/list_item_string2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_alignParentLeft="true"
+        android:paddingLeft="8dp"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+
+    <Button
+        android:id="@+id/plus_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="5dp"
+        android:text="+"
+        android:background="@android:color/transparent"
+        android:textColor="#b6964c"/>
+
+    <TextView
+        android:id="@+id/edit_nombre"
+        android:layout_width="50dp"
+        android:layout_height="wrap_content"
+        android:layout_toLeftOf="@id/plus_btn"
+        android:text="1"
+        android:textAlignment="center"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="10dp"
+        android:background="@android:color/transparent"
+        android:textColor="#b6964c"/>
+
+    <Button
+        android:id="@+id/moins_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toLeftOf="@id/edit_nombre"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="10dp"
+        android:text="-"
+        android:background="@android:color/transparent"
+        android:textColor="#b6964c"/>
+
+
+
+</RelativeLayout>

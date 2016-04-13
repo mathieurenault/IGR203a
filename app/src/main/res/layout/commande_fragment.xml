@@ -9,7 +9,25 @@
         android:text="Commande"
         android:id="@+id/textView"
         android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="40dp" />
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="30dp" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/validButton"
+        android:text="Valider"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"/>
+
+    <ListView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/listView3"
+        android:drawSelectorOnTop="false"
+        android:layout_below="@+id/textView"
+        />
+
+
 
 </RelativeLayout>

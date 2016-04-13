@@ -1,14 +1,91 @@
 <?xml version="1.0" encoding="utf-8"?>
+
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent" android:layout_height="match_parent">
 
     <TextView
-        android:layout_width="wrap_content"
+        android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceLarge"
         android:text="Carte"
+        android:textAlignment="center"
         android:id="@+id/textView"
-        android:layout_alignParentTop="true"
+        android:layout_gravity="center"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="40dp" />
+        android:layout_marginTop="50dp" />
+
+
+
+
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:id="@+id/centralLayout"
+        android:layout_above="@+id/serveurButton"
+        android:layout_below="@+id/textView">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:id="@+id/ChoixLayout">
+
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/entreeButton"
+                android:text="Entrée"
+                android:background="@android:color/transparent"
+                />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/platButton"
+                android:text="Plats"
+                android:background="@android:color/transparent"
+                />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/dessertButton"
+                android:text="Dessert"
+                android:background="@android:color/transparent"
+                />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/boissonButton"
+                android:text="Boisson"
+                android:background="@android:color/transparent"
+                />
+
+        </LinearLayout>
+
+        <ListView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/listView2"
+            android:drawSelectorOnTop="false"
+            />
+
+    </LinearLayout>
+
+
+
+
+    <Button
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/serveurButton"
+        android:text="Appel Serveur"
+        android:background="@android:color/transparent"
+        android:layout_alignParentBottom="true"
+        />
+
 </RelativeLayout>

@@ -19,13 +19,14 @@ import android.view.ViewGroup;
 
 import android.widget.TextView;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity implements CarteFragment.FragmentInterface, CommandeFragment.FragmentInterface2,AdditionFragment.FragmentInterface3{
 
     private CarteFragment carteFragment = null;
     private CommandeFragment commandeFragment = null;
     private AdditionFragment additionFragment = null;
 
     private SectionsPagerAdapter mSectionsPagerAdapter;
+    private String FragManage;
 
     /**
      * The {@link ViewPager} that will host the section contents.
@@ -76,6 +77,10 @@ public class MainActivity extends AppCompatActivity {
         return super.onOptionsItemSelected(item);
     }
 
+
+
+
+
     /**
      * A {@link FragmentPagerAdapter} that returns a fragment corresponding to
      * one of the sections/tabs/pages.
@@ -124,4 +129,21 @@ public class MainActivity extends AppCompatActivity {
             return null;
         }
     }
+
+    public void updateOtherFragment(){
+        System.out.println("TEST RELAIS MAINACTIVITY");
+        commandeFragment.updateAdapter();//
+
+    }
+
+    public void updateOtherFragment2(){
+        additionFragment.updateAdapter();
+
+    }
+
+    public void updateOtherFragment3(){
+        commandeFragment.updateCount();
+    }
+
+
 }
