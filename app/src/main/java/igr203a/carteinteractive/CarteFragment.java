@@ -82,17 +82,14 @@ public class CarteFragment extends Fragment implements AdapteurList.AdapterInter
                 // Le second est le nom de l'activité de destination
                 ArrayList<String> test3 = new ArrayList<String>(Arrays.asList(getResources().getStringArray(R.array.entreeList)));
                 test2.clear();
+                String[] split = null;
                 for(int i=0;i<test3.size();i++){
                     System.out.println(test3.get(i));
-                    test2.add(i,test3.get(i));
+                    split = test3.get(i).split("/");
+                    test2.add(i,split[0] + " (" + split[1] + " €)");
                 }
 
                 adapter.notifyDataSetChanged();
-
-
-
-
-
 
 
             }
@@ -105,9 +102,11 @@ public class CarteFragment extends Fragment implements AdapteurList.AdapterInter
                 // Le second est le nom de l'activité de destination
                 ArrayList<String> test3 = new ArrayList<String>(Arrays.asList(getResources().getStringArray(R.array.platList)));
                 test2.clear();
+                String[] split = null;
                 for(int i=0;i<test3.size();i++){
                     System.out.println(test3.get(i));
-                    test2.add(i,test3.get(i));
+                    split = test3.get(i).split("/");
+                    test2.add(i,split[0] + " (" + split[1] + " €)");
                 }
 
                 adapter.notifyDataSetChanged();
@@ -127,10 +126,11 @@ public class CarteFragment extends Fragment implements AdapteurList.AdapterInter
                 // Le premier paramètre est le nom de l'activité actuelle
                 // Le second est le nom de l'activité de destination
                 ArrayList<String> test3 = new ArrayList<String>(Arrays.asList(getResources().getStringArray(R.array.dessertList)));
-                test2.clear();
+                String[] split = null;
                 for(int i=0;i<test3.size();i++){
                     System.out.println(test3.get(i));
-                    test2.add(i,test3.get(i));
+                    split = test3.get(i).split("/");
+                    test2.add(i,split[0] + " (" + split[1] + " €)");
                 }
 
                 adapter.notifyDataSetChanged();
@@ -150,10 +150,11 @@ public class CarteFragment extends Fragment implements AdapteurList.AdapterInter
                 // Le premier paramètre est le nom de l'activité actuelle
                 // Le second est le nom de l'activité de destination
                 ArrayList<String> test3 = new ArrayList<String>(Arrays.asList(getResources().getStringArray(R.array.boissonList)));
-                test2.clear();
+                String[] split = null;
                 for(int i=0;i<test3.size();i++){
                     System.out.println(test3.get(i));
-                    test2.add(i,test3.get(i));
+                    split = test3.get(i).split("/");
+                    test2.add(i,split[0] + " (" + split[1] + " €)");
                 }
 
                 adapter.notifyDataSetChanged();
