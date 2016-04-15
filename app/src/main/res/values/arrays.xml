@@ -3,7 +3,7 @@
 <resources>
     <string-array name="entreeList">
         <item>Entrée 1/2</item>
-        <item>Entrée 2/4,3</item>
+        <item>Entrée 2/4.3</item>
         <item>Entrée 3/2</item>
         <item>Entrée 4/1</item>
 
@@ -15,7 +15,7 @@
         <item>Plat 3/1</item>
         <item>Plat 4/2</item>
         <item>BOEUF BOURGUIGNON/2</item>
-        <item>Giano/0,5</item>
+        <item>Giano/0.5</item>
         <item>Soeur de Prush/0</item>
 
     </string-array>

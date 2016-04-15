@@ -86,7 +86,8 @@ public class CarteFragment extends Fragment implements AdapteurList.AdapterInter
                 for(int i=0;i<test3.size();i++){
                     System.out.println(test3.get(i));
                     split = test3.get(i).split("/");
-                    test2.add(i,split[0] + " (" + split[1] + " €)");
+                    //test2.add(i,split[0] + " (" + split[1] + " €)");
+                    test2.add(i,test3.get(i));
                 }
 
                 adapter.notifyDataSetChanged();
@@ -106,7 +107,8 @@ public class CarteFragment extends Fragment implements AdapteurList.AdapterInter
                 for(int i=0;i<test3.size();i++){
                     System.out.println(test3.get(i));
                     split = test3.get(i).split("/");
-                    test2.add(i,split[0] + " (" + split[1] + " €)");
+                    //test2.add(i,split[0] + " (" + split[1] + " €)");
+                    test2.add(i,test3.get(i));
                 }
 
                 adapter.notifyDataSetChanged();
@@ -130,7 +132,8 @@ public class CarteFragment extends Fragment implements AdapteurList.AdapterInter
                 for(int i=0;i<test3.size();i++){
                     System.out.println(test3.get(i));
                     split = test3.get(i).split("/");
-                    test2.add(i,split[0] + " (" + split[1] + " €)");
+                    //test2.add(i,split[0] + " (" + split[1] + " €)");
+                    test2.add(i,test3.get(i));
                 }
 
                 adapter.notifyDataSetChanged();
@@ -154,7 +157,8 @@ public class CarteFragment extends Fragment implements AdapteurList.AdapterInter
                 for(int i=0;i<test3.size();i++){
                     System.out.println(test3.get(i));
                     split = test3.get(i).split("/");
-                    test2.add(i,split[0] + " (" + split[1] + " €)");
+                    //test2.add(i,split[0] + " (" + split[1] + " €)");
+                    test2.add(i,test3.get(i));
                 }
 
                 adapter.notifyDataSetChanged();

@@ -59,7 +59,9 @@ public class AdapteurList3 extends BaseAdapter implements ListAdapter {
 
         //Handle TextView and display string from your list
         TextView listItemText = (TextView)view.findViewById(R.id.nomProduit);
-        listItemText.setText(list.get(position));
+        String split[] = null;
+        split = list.get(position).split("/");
+        listItemText.setText(split[0] + " (" + split[0] + " €)");
         TextView edit = (TextView) view.findViewById(R.id.quantiteProduit);
         edit.setText(list2.get(position));
 

@@ -69,7 +69,9 @@ public class AdapteurList extends BaseAdapter implements ListAdapter {
 
         //Handle TextView and display string from your list
         TextView listItemText = (TextView)view.findViewById(R.id.list_item_string);
-        listItemText.setText(list.get(position));
+        String split[] = null;
+        split = list.get(position).split("/");
+        listItemText.setText(split[0] + " (" + split[1] + " €)");
 
         //Handle buttons and add onClickListeners
         Button addButton = (Button)view.findViewById(R.id.add_btn);
@@ -103,10 +105,6 @@ public class AdapteurList extends BaseAdapter implements ListAdapter {
                 String nomProduit = list.get(position);
 
                 System.out.println(nomProduit);
-
-
-
-
 
 
                 if(size==0){

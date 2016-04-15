@@ -2,6 +2,8 @@ package igr203a.carteinteractive;
 
 import android.app.AlertDialog;
 import android.content.DialogInterface;
+import android.util.Log;
+import android.widget.TextView;
 import android.widget.Toast;
 import android.app.Activity;
 import android.content.Context;
@@ -35,6 +37,7 @@ public class CommandeFragment extends Fragment {
     private int count = 1;
     private ArrayList<String> additionTab = null;
     FragmentInterface2 mCallback2;
+    private TextView total = null;
 
     // Container Activity must implement this interface
     public interface FragmentInterface2 {
@@ -50,6 +53,8 @@ public class CommandeFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View rootView = inflater.inflate(R.layout.commande_fragment, container, false);
+
+        total = (TextView) rootView.findViewById(R.id.total);
 
         validButton = (Button)rootView.findViewById(R.id.validButton);
 
@@ -167,6 +172,7 @@ public class CommandeFragment extends Fragment {
         if (lView==null){System.out.println("null");}
 
         lView.setAdapter(adapter2);
+        updateTotal();
 
         return rootView;
     }
@@ -184,6 +190,14 @@ public class CommandeFragment extends Fragment {
         uniteProduitList.add("1");
 
         adapter2.notifyDataSetChanged();
+
+        updateTotal();
+    }
+
+    @Override
+    public void onResume() {
+        super.onResume();
+        updateTotal();
     }
 
     @Override
@@ -208,6 +222,16 @@ public class CommandeFragment extends Fragment {
 
     public void updateCount(){
         count =1;
+    }
+
+    public void updateTotal() {
+        Log.i("Total", "IN");
+        int somme = 0;
+        for (String produit : commandList) {
+            Log.i("Total", produit);
+            somme += Float.parseFloat(produit.split("/")[1]);
+        }
+        total.setText(String.valueOf(somme) + " €");
     }
 
 

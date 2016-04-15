@@ -59,7 +59,9 @@ public class AdapteurList2 extends BaseAdapter implements ListAdapter {
 
         //Handle TextView and display string from your list
         TextView listItemText = (TextView)view.findViewById(R.id.list_item_string2);
-        listItemText.setText(list.get(position));
+        String split[] = null;
+        split = list.get(position).split("/");
+        listItemText.setText(split[0] + " (" + split[1] + " €)");
         TextView edit = (TextView) view.findViewById(R.id.edit_nombre);
         edit.setText(list2.get(position));
 
