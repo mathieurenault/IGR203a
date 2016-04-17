@@ -1,7 +1,9 @@
 package igr203a.carteinteractive;
 
 import android.app.Activity;
+import android.app.AlertDialog;
 import android.content.Context;
+import android.content.DialogInterface;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
@@ -14,6 +16,8 @@ import android.widget.ListView;
 
 import java.util.ArrayList;
 import android.widget.Button;
+import android.widget.Toast;
+
 /**
  * Created by Mathieu on 04/04/2016.
  */
@@ -54,31 +58,49 @@ public class AdditionFragment extends Fragment {
         payerButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                AlertDialog.Builder builder = new AlertDialog.Builder(getContext());
 
-                //ICI METTRE UN POPUP, SI CONFIRMATION ON PASS EN DESSOUS
+                builder.setTitle("Confirmation");
+                builder.setMessage("Payer l'addition maintenant ?");
+
+                builder.setPositiveButton("OUI", new DialogInterface.OnClickListener() {
+
+                    public void onClick(DialogInterface dialog, int which) {
+                        produitTab.clear();
+                        quantiteTab.clear();
+                        indiceTab.clear();
+
+                        SharedPreferences recupTableau = PreferenceManager.getDefaultSharedPreferences(getActivity());
+                        SharedPreferences.Editor recupTableauEditor = recupTableau.edit();
 
 
+                        int size = recupTableau.getInt("Status_size2",0);
 
-                produitTab.clear();
-                quantiteTab.clear();
-                indiceTab.clear();
+                        for(int i=0; i<size-1;i++){
+                            recupTableauEditor.remove("Status_2" + i);
+                        }
 
-                SharedPreferences recupTableau = PreferenceManager.getDefaultSharedPreferences(getActivity());
-                SharedPreferences.Editor recupTableauEditor = recupTableau.edit();
+                        recupTableauEditor.putInt("Status_size2", 0);
 
+                        recupTableauEditor.apply();
 
-                int size = recupTableau.getInt("Status_size2",0);
+                        adapter.notifyDataSetChanged();
+                        mCallback3.updateOtherFragment3();
+                    }
 
-                for(int i=0; i<size-1;i++){
-                    recupTableauEditor.remove("Status_2" + i);
-                }
+                });
 
-                recupTableauEditor.putInt("Status_size2", 0);
+                builder.setNegativeButton("NON", new DialogInterface.OnClickListener() {
 
-                recupTableauEditor.apply();
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        // Do nothing
+                        dialog.dismiss();
+                    }
+                });
 
-                adapter.notifyDataSetChanged();
-                mCallback3.updateOtherFragment3();
+                AlertDialog alert = builder.create();
+                alert.show();
 
             }
         });
