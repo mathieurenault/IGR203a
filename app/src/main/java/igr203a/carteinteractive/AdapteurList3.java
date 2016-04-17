@@ -3,6 +3,7 @@ package igr203a.carteinteractive;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.preference.PreferenceManager;
+import android.util.Log;
 import android.widget.BaseAdapter;
 import android.widget.EditText;
 import android.widget.ListAdapter;
@@ -61,7 +62,12 @@ public class AdapteurList3 extends BaseAdapter implements ListAdapter {
         TextView listItemText = (TextView)view.findViewById(R.id.nomProduit);
         String split[] = null;
         split = list.get(position).split("/");
-        listItemText.setText(split[0] + " (" + split[0] + " €)");
+        if (split.length > 1) {
+            listItemText.setText(split[0] + " (" + split[1] + " €)");
+        }
+        else {
+            listItemText.setText(split[0]);
+        }
         TextView edit = (TextView) view.findViewById(R.id.quantiteProduit);
         edit.setText(list2.get(position));
 

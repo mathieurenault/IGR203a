@@ -72,7 +72,6 @@ public class CommandeFragment extends Fragment {
                 builder.setPositiveButton("OUI", new DialogInterface.OnClickListener() {
 
                     public void onClick(DialogInterface dialog, int which) {
-                        // Do nothing but close the dialog
                         if (commandList.size()>0) {
 
                             additionTab.clear();
@@ -91,7 +90,7 @@ public class CommandeFragment extends Fragment {
                             }
 
 
-                            additionTab.add("Commande " + count);
+                            additionTab.add("Commande " + count + " (" + String.valueOf(updateTotal()) + " €)");
                             for (int i = 0; i < commandList.size(); i++) {
                                 additionTab.add(commandList.get(i));
                                 additionTab.add(uniteProduitList.get(i));
@@ -100,7 +99,7 @@ public class CommandeFragment extends Fragment {
                             tabCommandEditor.putInt("Status_size2", additionTab.size());
                             for (int i = 0; i < additionTab.size(); i++) {
                                 tabCommandEditor.putString("Status_2" + i, additionTab.get(i));
-                                System.out.println("TEEEEEEESSSSSSTTTTTT" + additionTab.get(i));
+                                Log.i("Addition TAB", additionTab.get(i));
                             }
 
                             tabCommandEditor.commit();
@@ -132,6 +131,7 @@ public class CommandeFragment extends Fragment {
 
                         count = count+1;
                         dialog.dismiss();
+                        updateTotal();
                         Toast.makeText(getActivity(), "Votre commande a bien été validée !", Toast.LENGTH_LONG).show();
                     }
 
@@ -163,7 +163,7 @@ public class CommandeFragment extends Fragment {
             commandList.add(recupTableau.getString("Status_" + i, null));
             uniteProduitList.add("1");
         }
-        adapter2 = new AdapteurList2(commandList, this.getActivity(),uniteProduitList);
+        adapter2 = new AdapteurList2(commandList, this.getActivity(), uniteProduitList, this);
 
 
 
@@ -224,14 +224,16 @@ public class CommandeFragment extends Fragment {
         count =1;
     }
 
-    public void updateTotal() {
-        Log.i("Total", "IN");
-        int somme = 0;
+    public float updateTotal() {
+        float somme = 0;
+        int i = -1;
         for (String produit : commandList) {
-            Log.i("Total", produit);
-            somme += Float.parseFloat(produit.split("/")[1]);
+            i++;
+            somme += Float.parseFloat(produit.split("/")[1]) * Float.parseFloat(uniteProduitList.get(i));
         }
         total.setText(String.valueOf(somme) + " €");
+
+        return somme;
     }
 
 

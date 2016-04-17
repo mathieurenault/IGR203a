@@ -23,12 +23,14 @@ public class AdapteurList2 extends BaseAdapter implements ListAdapter {
     private ArrayList<String> list = new ArrayList<String>();
     private ArrayList<String> list2 = new ArrayList<String>();
     private Context context;
+    private CommandeFragment fragment = null;
 
 
-    public AdapteurList2(ArrayList<String> list, Context context, ArrayList<String> list2) {
+    public AdapteurList2(ArrayList<String> list, Context context, ArrayList<String> list2, CommandeFragment fragment) {
         this.list = list;
         this.context = context;
         this.list2=list2;
+        this.fragment = fragment;
     }
 
 
@@ -80,6 +82,7 @@ public class AdapteurList2 extends BaseAdapter implements ListAdapter {
                 number=number+1;
                 list2.set(position,Integer.toString(number));
                 notifyDataSetChanged();
+                fragment.updateTotal();
 
             }
         });
@@ -111,6 +114,7 @@ public class AdapteurList2 extends BaseAdapter implements ListAdapter {
 
                 }
                 notifyDataSetChanged();
+                fragment.updateTotal();
 
             }
         });

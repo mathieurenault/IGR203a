@@ -6,6 +6,7 @@ import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
 import android.support.v4.app.Fragment;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -86,6 +87,7 @@ public class AdditionFragment extends Fragment {
 
         int size2 = tabCommand.getInt("Status_size2", 0);
         for (int i = 0; i < size2; i++) {
+            Log.i("AdditionFragment", tabCommand.getString("Status_2" + i, null));
             if (tabCommand.getString("Status_2" + i, null).startsWith("Commande")) {
                 indiceTab.add(i);
             }
@@ -95,7 +97,6 @@ public class AdditionFragment extends Fragment {
 
         if (indiceTab.size() == 1) {
             for (int i = 0; i < size2; i++) {
-
                 if (i == indiceTab.get(0)) {
                     produitTab.add(tabCommand.getString("Status_2" + i, null));
                     quantiteTab.add("Quantité");
@@ -127,14 +128,9 @@ public class AdditionFragment extends Fragment {
                     quantiteTab.add(tabCommand.getString("Status_2" + (i+1), null));
 
                 }
-
                 for (int j = 0; j < produitTab.size(); j++) {
-
                     System.out.println("ON EST ARRIVE " + produitTab.get(j) + " " + quantiteTab.get(j));
-
                 }
-
-
             }
         }
 
