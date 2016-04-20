@@ -138,12 +138,6 @@ public class CarteFragment extends Fragment implements AdapteurList.AdapterInter
 
                 adapter.notifyDataSetChanged();
 
-
-
-
-
-
-
             }
         });
 

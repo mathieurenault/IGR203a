@@ -140,7 +140,7 @@ public class AdapteurList extends BaseAdapter implements ListAdapter {
                     buttonListener.updateCommande();
                     notifyDataSetChanged();
 
-
+                    Toast.makeText(context, "Produit ajouté à votre commande avec succès !", Toast.LENGTH_SHORT).show();
 
                 }}
 

@@ -126,18 +126,23 @@ public class MainActivity extends AppCompatActivity implements CarteFragment.Fra
     }
 
     public void updateOtherFragment(){
-        System.out.println("TEST RELAIS MAINACTIVITY");
-        commandeFragment.updateAdapter();//
+        if (commandeFragment != null) {
+            commandeFragment.updateAdapter();
+        }
 
     }
 
     public void updateOtherFragment2(){
-        additionFragment.updateAdapter();
+        if (additionFragment != null) {
+            additionFragment.updateAdapter();
+        }
 
     }
 
     public void updateOtherFragment3(){
-        commandeFragment.updateCount();
+        if (commandeFragment != null) {
+            commandeFragment.updateCount();
+        }
     }
 
 

@@ -86,6 +86,8 @@ public class AdditionFragment extends Fragment {
 
                         adapter.notifyDataSetChanged();
                         mCallback3.updateOtherFragment3();
+
+                        Toast.makeText(getContext(), "Paiement accepté !", Toast.LENGTH_LONG).show();
                     }
 
                 });
