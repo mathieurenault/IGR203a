@@ -60,7 +60,8 @@ public class CarteFragment extends Fragment implements AdapteurList.AdapterInter
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View rootView =  inflater.inflate(R.layout.carte_fragment, container, false);
-        test2 = new ArrayList<String>(Arrays.asList(getResources().getStringArray(R.array.entreeList)));
+        test2 = new ArrayList<String>();
+        test2.addAll(Arrays.asList(getResources().getStringArray(R.array.entreeList)));
 
 
         adapter = new AdapteurList(test2, this.getActivity(),this);

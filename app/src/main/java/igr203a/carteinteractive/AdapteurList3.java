@@ -71,11 +71,6 @@ public class AdapteurList3 extends BaseAdapter implements ListAdapter {
         TextView edit = (TextView) view.findViewById(R.id.quantiteProduit);
         edit.setText(list2.get(position));
 
-
-
-
-
-
         return view;
     }
 }

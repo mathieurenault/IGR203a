@@ -16,6 +16,7 @@ import android.widget.ListView;
 
 import java.util.ArrayList;
 import android.widget.Button;
+import android.widget.TextView;
 import android.widget.Toast;
 
 /**
@@ -31,6 +32,7 @@ public class AdditionFragment extends Fragment {
     private AdapteurList3 adapter = null;
     private Button payerButton = null;
     FragmentInterface3 mCallback3;
+    private TextView total = null;
 
     // Container Activity must implement this interface
     public interface FragmentInterface3 {
@@ -54,6 +56,7 @@ public class AdditionFragment extends Fragment {
         indiceTab = new ArrayList<>();
 
         payerButton = (Button)rootView.findViewById(R.id.payerButton);
+        total = (TextView)rootView.findViewById(R.id.total);
 
         payerButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -111,13 +114,10 @@ public class AdditionFragment extends Fragment {
 
         int size2 = tabCommand.getInt("Status_size2", 0);
         for (int i = 0; i < size2; i++) {
-            Log.i("AdditionFragment", tabCommand.getString("Status_2" + i, null));
             if (tabCommand.getString("Status_2" + i, null).startsWith("Commande")) {
                 indiceTab.add(i);
             }
         }
-
-
 
         if (indiceTab.size() == 1) {
             for (int i = 0; i < size2; i++) {
@@ -156,12 +156,7 @@ public class AdditionFragment extends Fragment {
             }
         }
 
-
-
-
         adapter = new AdapteurList3(produitTab, this.getActivity(),quantiteTab);
-
-
 
         //handle listview and assign adapter
         ListView lView = (ListView)rootView.findViewById(R.id.listView3);
@@ -170,8 +165,6 @@ public class AdditionFragment extends Fragment {
         lView.setAdapter(adapter);
 
         return rootView;
-
-
     }
 
     public void updateAdapter() {
@@ -187,8 +180,6 @@ public class AdditionFragment extends Fragment {
                 indiceTab.add(i);
             }
         }
-
-
 
         if (indiceTab.size() == 1) {
             for (int i = 0; i < size2; i++) {
@@ -225,12 +216,10 @@ public class AdditionFragment extends Fragment {
 
                 }
 
-
-
-
             }
         }
         adapter.notifyDataSetChanged();
+        updateTotal();
     }
 
     @Override
@@ -253,5 +242,16 @@ public class AdditionFragment extends Fragment {
         }
     }
 
+    public float updateTotal() {
+        float somme = 0;
+        int i = -1;
+        for (String produit : produitTab) {
+            i++;
+            somme += Float.parseFloat(produit.split("/")[1]) * Float.parseFloat(quantiteTab.get(i));
+        }
+        total.setText(String.valueOf(somme) + " €");
+
+        return somme;
+    }
 }
 
