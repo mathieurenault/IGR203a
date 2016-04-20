@@ -61,7 +61,7 @@ public class CommandeFragment extends Fragment {
             @Override
             public void onClick(View v) {
 
-                AlertDialog.Builder builder = new AlertDialog.Builder(getContext());
+                AlertDialog.Builder builder = new AlertDialog.Builder(getContext(), R.style.AlertDialogCustom);
 
                 builder.setTitle("Confirmation");
                 builder.setMessage("Valider la commande ?");

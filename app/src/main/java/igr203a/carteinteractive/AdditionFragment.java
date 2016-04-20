@@ -61,7 +61,7 @@ public class AdditionFragment extends Fragment {
         payerButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                AlertDialog.Builder builder = new AlertDialog.Builder(getContext());
+                AlertDialog.Builder builder = new AlertDialog.Builder(getContext(), R.style.AlertDialogCustom);
 
                 builder.setTitle("Confirmation");
                 builder.setMessage("Payer l'addition maintenant ?");

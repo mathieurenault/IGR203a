@@ -84,7 +84,7 @@ public class CarteFragment extends Fragment implements AdapteurList.AdapterInter
             public void onClick(View v) {
                 // Le premier paramètre est le nom de l'activité actuelle
                 // Le second est le nom de l'activité de destination
-                AlertDialog.Builder builder = new AlertDialog.Builder(getContext());
+                AlertDialog.Builder builder = new AlertDialog.Builder(getContext(), R.style.AlertDialogCustom);
 
                 builder.setTitle("Confirmation");
                 builder.setMessage("Appeler le serveur ?");
