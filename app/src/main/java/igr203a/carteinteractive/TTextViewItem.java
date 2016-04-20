@@ -1,25 +1,26 @@
 package igr203a.carteinteractive;
 
-/**
- * Created by Nico on 20/04/2016.
- */
+
 import android.content.Context;
 import android.graphics.Typeface;
 import android.util.AttributeSet;
-import android.widget.Button;
+import android.widget.TextView;
 
-public class BButton extends Button {
+/**
+ * Created by Nico on 20/04/2016.
+ */
+public class TTextViewItem extends TextView {
 
-    public BButton(Context context, AttributeSet attrs) {
+    public TTextViewItem(Context context, AttributeSet attrs){
         super(context, attrs);
         this.setTypeface(Typeface.createFromAsset(context.getAssets(),"Fonts/Champagne & Limousines.ttf"));
+
     }
 
-    public BButton(Context context)
+    public TTextViewItem(Context context)
     {
         super(context);
         this.setTypeface(Typeface.createFromAsset(context.getAssets(),"Fonts/Champagne & Limousines.ttf"));
     }
 
 }
-

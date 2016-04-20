@@ -13,14 +13,14 @@ public class TTextView extends TextView {
 
     public TTextView(Context context, AttributeSet attrs){
         super(context, attrs);
-        this.setTypeface(Typeface.createFromAsset(context.getAssets(),"Fonts/green avocado.ttf"));
+        this.setTypeface(Typeface.createFromAsset(context.getAssets(),"Fonts/Atelier Omega.ttf"));
 
     }
 
     public TTextView(Context context)
     {
         super(context);
-        this.setTypeface(Typeface.createFromAsset(context.getAssets(),"Fonts/green avocado.ttf"));
+        this.setTypeface(Typeface.createFromAsset(context.getAssets(),"Fonts/Atelier Omega.ttf"));
     }
 
 }

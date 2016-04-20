@@ -123,6 +123,13 @@ public class CarteFragment extends Fragment implements AdapteurList.AdapterInter
                 // Le second est le nom de l'activité de destination
                 ArrayList<String> test3 = new ArrayList<String>(Arrays.asList(getResources().getStringArray(R.array.entreeList)));
                 test2.clear();
+                dessertButton.setTextColor(getResources().getColor(R.color.blanc));
+                platButton.setTextColor(getResources().getColor(R.color.blanc));
+                boissonButton.setTextColor(getResources().getColor(R.color.blanc));
+
+
+
+                entreeButton.setTextColor(getResources().getColor(R.color.colorChangement));
                 String[] split = null;
                 for(int i=0;i<test3.size();i++){
                     split = test3.get(i).split("/");
@@ -143,6 +150,13 @@ public class CarteFragment extends Fragment implements AdapteurList.AdapterInter
                 // Le second est le nom de l'activité de destination
                 ArrayList<String> test3 = new ArrayList<String>(Arrays.asList(getResources().getStringArray(R.array.platList)));
                 test2.clear();
+                entreeButton.setTextColor(getResources().getColor(R.color.blanc));
+                dessertButton.setTextColor(getResources().getColor(R.color.blanc));
+                boissonButton.setTextColor(getResources().getColor(R.color.blanc));
+
+
+
+                platButton.setTextColor(getResources().getColor(R.color.colorChangement));
                 String[] split = null;
                 for(int i=0;i<test3.size();i++){
 
@@ -169,6 +183,13 @@ public class CarteFragment extends Fragment implements AdapteurList.AdapterInter
                 // Le second est le nom de l'activité de destination
                 ArrayList<String> test3 = new ArrayList<String>(Arrays.asList(getResources().getStringArray(R.array.dessertList)));
                 String[] split = null;
+                entreeButton.setTextColor(getResources().getColor(R.color.blanc));
+                platButton.setTextColor(getResources().getColor(R.color.blanc));
+                boissonButton.setTextColor(getResources().getColor(R.color.blanc));
+
+
+
+                dessertButton.setTextColor(getResources().getColor(R.color.colorChangement));
                 for(int i=0;i<test3.size();i++){
 
                     split = test3.get(i).split("/");
@@ -186,6 +207,13 @@ public class CarteFragment extends Fragment implements AdapteurList.AdapterInter
             public void onClick(View v) {
                 // Le premier paramètre est le nom de l'activité actuelle
                 // Le second est le nom de l'activité de destination
+                entreeButton.setTextColor(getResources().getColor(R.color.blanc));
+                platButton.setTextColor(getResources().getColor(R.color.blanc));
+                dessertButton.setTextColor(getResources().getColor(R.color.blanc));
+
+
+
+                boissonButton.setTextColor(getResources().getColor(R.color.colorChangement));
                 ArrayList<String> test3 = new ArrayList<String>(Arrays.asList(getResources().getStringArray(R.array.boissonList)));
                 String[] split = null;
                 for(int i=0;i<test3.size();i++){

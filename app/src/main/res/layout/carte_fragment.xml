@@ -9,7 +9,7 @@
         android:textAppearance="?android:attr/textAppearanceLarge"
         android:text="Notre Carte"
         android:textAlignment="center"
-        android:textSize="40dp"
+        android:textSize="55dp"
         android:textColor="#630202"
         android:id="@+id/textView"
         android:layout_gravity="center"
@@ -25,6 +25,9 @@
         android:background="@drawable/buttonshape"
         android:drawableLeft="@drawable/waitericon"
         android:textColor="#630202"
+        android:textSize="12dp"
+        android:textAlignment="center"
+        android:layout_marginTop="5dp"
         android:layout_alignParentTop="true"
         android:layout_alignParentRight="true"
         />
@@ -36,7 +39,7 @@
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         android:id="@+id/centralLayout"
-        android:layout_below="@+id/serveurButton"
+        android:layout_below="@+id/textView"
         >
 
         <LinearLayout

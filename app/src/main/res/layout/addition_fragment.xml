@@ -7,12 +7,12 @@
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceLarge"
         android:text="Addition"
-        android:textSize="40dp"
+        android:textSize="55dp"
         android:id="@+id/textView3"
         android:layout_alignParentTop="true"
         android:textColor="#630202"
         android:layout_marginLeft="15dp"
-        android:layout_marginTop="0dp" />
+        android:layout_marginTop="5dp" />
 
     <Button
         android:layout_width="wrap_content"
@@ -22,7 +22,8 @@
         android:layout_alignParentRight="true"
         android:layout_alignParentTop="true"
         android:textColor="#630202"
-        android:background="@drawable/buttonshape"/>
+        android:background="@drawable/buttonshape"
+        android:layout_marginTop="5dp"/>
 
     <ListView
         android:layout_width="wrap_content"
