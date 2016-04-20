@@ -3,16 +3,19 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent" android:layout_height="match_parent">
 
-    <TextView
+    <igr203a.carteinteractive.TTextView
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceLarge"
-        android:text="Carte"
+        android:text="Notre Carte"
         android:textAlignment="center"
+        android:textSize="50dp"
+        android:textColor="#630202"
         android:id="@+id/textView"
         android:layout_gravity="center"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="50dp" />
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="5dp"/>
 
 
 
@@ -38,7 +41,9 @@
                 android:layout_height="wrap_content"
                 android:id="@+id/entreeButton"
                 android:text="Entrée"
-                android:background="@android:color/transparent"
+                android:background="@drawable/buttonshape2"
+                android:textColor="#FFFFFF"
+                android:layout_marginTop="50dp"
                 />
 
             <Button
@@ -46,23 +51,26 @@
                 android:layout_height="wrap_content"
                 android:id="@+id/platButton"
                 android:text="Plats"
-                android:background="@android:color/transparent"
+                android:background="@drawable/buttonshape2"
+                android:textColor="#FFFFFF"
                 />
 
             <Button
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:id="@+id/dessertButton"
-                android:text="Dessert"
-                android:background="@android:color/transparent"
+                android:text="Desserts"
+                android:background="@drawable/buttonshape2"
+                android:textColor="#FFFFFF"
                 />
 
             <Button
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:id="@+id/boissonButton"
-                android:text="Boisson"
-                android:background="@android:color/transparent"
+                android:text="Boissons"
+                android:background="@drawable/buttonshape2"
+                android:textColor="#FFFFFF"
                 />
 
         </LinearLayout>
@@ -79,13 +87,16 @@
 
 
 
-    <Button
-        android:layout_width="fill_parent"
+    <igr203a.carteinteractive.BButton
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/serveurButton"
         android:text="Appel Serveur"
-        android:background="@android:color/transparent"
+        android:background="@drawable/buttonshape"
+        android:drawableLeft="@drawable/waitericon"
+        android:textColor="#630202"
         android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
         />
 
 </RelativeLayout>

@@ -2,15 +2,17 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent" android:layout_height="match_parent">
 
-    <TextView
+    <igr203a.carteinteractive.TTextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceLarge"
         android:text="Addition"
+        android:textSize="50dp"
         android:id="@+id/textView3"
         android:layout_alignParentTop="true"
+        android:textColor="#630202"
         android:layout_marginLeft="15dp"
-        android:layout_marginTop="30dp" />
+        android:layout_marginTop="0dp" />
 
     <Button
         android:layout_width="wrap_content"
@@ -18,7 +20,9 @@
         android:id="@+id/payerButton"
         android:text="Payer"
         android:layout_alignParentRight="true"
-        android:layout_alignParentTop="true"/>
+        android:layout_alignParentTop="true"
+        android:textColor="#630202"
+        android:background="@drawable/buttonshape"/>
 
     <ListView
         android:layout_width="wrap_content"

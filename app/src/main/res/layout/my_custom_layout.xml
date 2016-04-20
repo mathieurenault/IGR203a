@@ -4,7 +4,6 @@
     android:layout_height="match_parent"
     >
 
-
     <ImageView
         android:layout_width="80dp"
         android:layout_height="80dp"
@@ -15,6 +14,7 @@
         android:layout_marginBottom="8dp"
         android:src="@drawable/test"/>
 
+
     <TextView
         android:id="@+id/list_item_string"
         android:layout_width="wrap_content"
@@ -22,9 +22,10 @@
         android:layout_centerVertical="true"
         android:layout_toRightOf="@+id/imageView"
         android:layout_toEndOf="@+id/imageView"
-        android:paddingLeft="8dp"
         android:text="test"
-        android:textSize="18sp"
+        android:paddingLeft="8dp"
+        android:textColor="#630202"
+        android:textSize="15sp"
         android:textStyle="bold" />
 
     <Button
@@ -35,8 +36,12 @@
         android:layout_centerVertical="true"
         android:layout_marginRight="5dp"
         android:text="Ajouter"
-        android:background="@android:color/transparent"
-        android:textColor="#b6964c"/>
+        android:textColor="#630202"
+        android:background="@drawable/buttonshape"
+        android:shadowColor="#A8A8A8"
+        android:shadowDx="0"
+        android:shadowDy="0"
+        android:shadowRadius="5"/>
 
 
 </RelativeLayout>

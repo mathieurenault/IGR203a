@@ -1,38 +1,40 @@
 <?xml version="1.0" encoding="utf-8"?>
 
 <resources>
-    <string-array name="entreeList">
-        <item>Entrée 1/2/burger1</item>
-        <item>Entrée 2/4.3/burger2</item>
-        <item>Entrée 3/2/burger1</item>
-        <item>Entrée 4/1/burger2</item>
+
+    <string-array name="platList">
+        <item>Magret de canard du sud-ouest/12/burger1</item>
+        <item>Joue de cochon braisée/14.3/burger1</item>
+        <item>Boeuf Normand et son jus/12/burger2</item>
+        <item>Turbot rôti, crème de petits pois/13/burger1</item>
 
     </string-array>
 
-    <string-array name="platList">
-        <item>Plat 1/10/burger1</item>
-        <item>Plat 2/8/burger2</item>
-        <item>Plat 3/1/burger1</item>
-        <item>Plat 4/2/burger2</item>
-        <item>BOEUF BOURGUIGNON/2/burger1</item>
-        <item>Giano/0.5/burger2</item>
-        <item>Soeur de Prush/0/burger1</item>
+    <string-array name="entreeList">
+        <item>Cappuccino de butternuts aux noisettes/8/burger1</item>
+        <item>Oeuf mollet aux pleurotes/8/burger1</item>
+        <item>Charlotte d’asperges blanches au chèvre frais/7/burger1</item>
+        <item>Clafoutis d’avocat au Roquefort/9/burger1</item>
 
     </string-array>
 
     <string-array name="dessertList">
-        <item>Dessert 1/1/burger1</item>
-        <item>Dessert 2/2/burger2</item>
-        <item>Dessert 3/3/burger1</item>
-        <item>Dessert 4/2/burger2</item>
+
+        <item>Sélection de fromages/1/burger1</item>
+        <item>Tartelette passion – chocolat au lait/8/burger1</item>
+        <item>Ananas rôti à la vanille de Madagascar/7/burger1</item>
+        <item>Fraises de Nîmes et rhubarbe/7/burger1</item>
+        <item>Le fameux Paris-Brest de Maxime/9/burger1</item>
+
 
     </string-array>
 
     <string-array name="boissonList">
-        <item>Boisson 1/2/burger1</item>
-        <item>Boisson 2/3/burger2</item>
-        <item>Boisson 3/1/burger1</item>
-        <item>Boisson 4/4/burger2</item>
+
+        <item>Glengoyne 10 ans 4 cl/8/burger1</item>
+        <item>Pessac-Léognan/12/burger1</item>
+        <item>Coca/3/burger1</item>
+        <item>Jus digr/20/burger1</item>
 
     </string-array>
 </resources>
