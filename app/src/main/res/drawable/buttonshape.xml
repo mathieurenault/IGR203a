@@ -14,7 +14,7 @@
         />
 
     <stroke
-        android:width="3dp"
-        android:color="#630202"
+        android:width="0.5dp"
+        android:color="@color/colorPrimary"
         />
 </shape>
