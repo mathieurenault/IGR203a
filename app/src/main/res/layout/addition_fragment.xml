@@ -7,7 +7,7 @@
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceLarge"
         android:text="Addition"
-        android:textSize="55dp"
+        android:textSize="45dp"
         android:id="@+id/textView3"
         android:layout_alignParentTop="true"
         android:textColor="@color/colorPrimary"
@@ -16,12 +16,12 @@
 
     <igr203a.carteinteractive.BButtonClass
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_height="45dp"
         android:id="@+id/payerButton"
         android:text="Payer"
         android:layout_alignParentRight="true"
         android:layout_alignParentTop="true"
-        android:textColor="#630202"
+        android:textColor="@color/grey"
         android:background="@drawable/buttonshape"
         android:layout_marginTop="5dp"/>
 
@@ -40,7 +40,7 @@
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceMedium"
         android:text="Total : "
-        android:textColor="#630202"
+        android:textColor="@color/grey"
         android:textSize="30dp"
         android:id="@+id/textViewtotal"
         android:layout_alignParentBottom="true"
@@ -53,7 +53,7 @@
         android:textAppearance="?android:attr/textAppearanceMedium"
         android:text="0.0 €"
         android:id="@+id/total"
-        android:textColor="#630202"
+        android:textColor="@color/grey"
         android:layout_toRightOf="@+id/textViewtotal"
         android:layout_alignBottom="@+id/textViewtotal"
         android:layout_marginLeft="15dp"

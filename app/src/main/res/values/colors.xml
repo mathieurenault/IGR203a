@@ -5,6 +5,9 @@
     <color name="colorAccent">#E3CDA4</color>
     <color name="colorChangement">#C77966</color>
     <color name="blanc">#FFFFFF</color>
+    <color name="grey">#2F343B</color>
+
+
 
 </resources>
 

@@ -126,6 +126,8 @@ public class AdditionFragment extends Fragment {
                 if (i == indiceTab.get(0)) {
                     produitTab.add(tabCommand.getString("Status_2" + i, null));
                     quantiteTab.add("Quantité");
+                    produitTab.add(" ");
+                    quantiteTab.add(" ");
                 } else if (indiceTab.get(0) < i  && (i - indiceTab.get(0) - 1) % 2 == 0) {
                     produitTab.add(tabCommand.getString("Status_2" + i, null));
                     quantiteTab.add(tabCommand.getString("Status_2" + (i+1), null));
@@ -137,8 +139,12 @@ public class AdditionFragment extends Fragment {
             for (int i = 0; i < size2; i++) {
                 for (int j = 0; j < indiceTab.size() - 1; j++) {
                     if (i == indiceTab.get(j)) {
+                        produitTab.add(" ");
+                        quantiteTab.add(" ");
                         produitTab.add(tabCommand.getString("Status_2" + i, null));
                         quantiteTab.add("Quantité");
+                        produitTab.add(" ");
+                        quantiteTab.add(" ");
                     } else if (indiceTab.get(j) < i && i < indiceTab.get(j + 1) && (i - indiceTab.get(j) - 1) % 2 == 0) {
                         produitTab.add(tabCommand.getString("Status_2" + i, null));
                         quantiteTab.add(tabCommand.getString("Status_2" + (i+1), null));
@@ -146,8 +152,12 @@ public class AdditionFragment extends Fragment {
                     }
                 }
                 if (i==indiceTab.get(indiceTab.size()-1)) {
+                    produitTab.add(" ");
+                    quantiteTab.add(" ");
                     produitTab.add(tabCommand.getString("Status_2" + i, null));
                     quantiteTab.add("Quantité");
+                    produitTab.add(" ");
+                    quantiteTab.add(" ");
                 }
                 if (indiceTab.get(indiceTab.size() - 1) < i && (i - indiceTab.get(indiceTab.size() - 1) - 1) % 2 == 0) {
                     produitTab.add(tabCommand.getString("Status_2" + i, null));
@@ -189,6 +199,8 @@ public class AdditionFragment extends Fragment {
                 if (i == indiceTab.get(0)) {
                     produitTab.add(tabCommand.getString("Status_2" + i, null));
                     quantiteTab.add("Quantité");
+                    produitTab.add(" ");
+                    quantiteTab.add(" ");
                 } else if (indiceTab.get(0) < i  && (i - indiceTab.get(0) - 1) % 2 == 0) {
                     produitTab.add(tabCommand.getString("Status_2" + i, null));
                     quantiteTab.add(tabCommand.getString("Status_2" + (i+1), null));
@@ -200,8 +212,12 @@ public class AdditionFragment extends Fragment {
             for (int i = 0; i < size2; i++) {
                 for (int j = 0; j < indiceTab.size() - 1; j++) {
                     if (i == indiceTab.get(j)) {
+                        produitTab.add(" ");
+                        quantiteTab.add(" ");
                         produitTab.add(tabCommand.getString("Status_2" + i, null));
                         quantiteTab.add("Quantité");
+                        produitTab.add(" ");
+                        quantiteTab.add(" ");
                     } else if (indiceTab.get(j) < i && i < indiceTab.get(j + 1) && (i - indiceTab.get(j) - 1) % 2 == 0) {
                         produitTab.add(tabCommand.getString("Status_2" + i, null));
                         quantiteTab.add(tabCommand.getString("Status_2" + (i+1), null));
@@ -209,8 +225,12 @@ public class AdditionFragment extends Fragment {
                     }
                 }
                 if (i==indiceTab.get(indiceTab.size()-1)){
+                    produitTab.add(" ");
+                    quantiteTab.add(" ");
                     produitTab.add(tabCommand.getString("Status_2" +i,null));
                     quantiteTab.add("Quantité");
+                    produitTab.add(" ");
+                    quantiteTab.add(" ");
                 }
                 if (indiceTab.get(indiceTab.size() - 1) < i && (i - indiceTab.get(indiceTab.size() - 1) - 1) % 2 == 0) {
                     produitTab.add(tabCommand.getString("Status_2" + i, null));
@@ -250,7 +270,7 @@ public class AdditionFragment extends Fragment {
         for (String produit : produitTab) {
             i++;
             Log.i("Produit", produit);
-            if (!produit.startsWith("Commande")) {
+            if (!produit.startsWith("Commande") && !produit.startsWith(" ")) {
                 somme += Float.parseFloat(produit.split("/")[1]) * Float.parseFloat(quantiteTab.get(i));
             }
         }
