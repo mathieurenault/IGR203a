@@ -90,6 +90,8 @@ public class AdditionFragment extends Fragment {
                         adapter.notifyDataSetChanged();
                         mCallback3.updateOtherFragment3();
 
+                        updateTotal();
+
                         Toast.makeText(getContext(), "Paiement accepté !", Toast.LENGTH_LONG).show();
                     }
 
@@ -247,7 +249,10 @@ public class AdditionFragment extends Fragment {
         int i = -1;
         for (String produit : produitTab) {
             i++;
-            somme += Float.parseFloat(produit.split("/")[1]) * Float.parseFloat(quantiteTab.get(i));
+            Log.i("Produit", produit);
+            if (!produit.startsWith("Commande")) {
+                somme += Float.parseFloat(produit.split("/")[1]) * Float.parseFloat(quantiteTab.get(i));
+            }
         }
         total.setText(String.valueOf(somme) + " €");
 

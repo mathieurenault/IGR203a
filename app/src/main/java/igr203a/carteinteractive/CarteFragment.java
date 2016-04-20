@@ -66,8 +66,6 @@ public class CarteFragment extends Fragment implements AdapteurList.AdapterInter
 
         adapter = new AdapteurList(test2, this.getActivity(),this);
 
-
-
         //handle listview and assign adapter
         ListView lView = (ListView)rootView.findViewById(R.id.listView2);
         if (lView==null){System.out.println("null");}
