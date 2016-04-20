@@ -158,7 +158,7 @@ public class AdditionFragment extends Fragment {
             }
         }
 
-        adapter = new AdapteurList3(produitTab, this.getActivity(),quantiteTab);
+        adapter = new AdapteurList3(produitTab, this.getActivity(),quantiteTab, indiceTab);
 
         //handle listview and assign adapter
         ListView lView = (ListView)rootView.findViewById(R.id.listView3);

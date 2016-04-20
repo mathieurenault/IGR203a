@@ -3,38 +3,37 @@
 <resources>
 
     <string-array name="platList">
-        <item>Magret de canard du sud-ouest/12/burger1</item>
-        <item>Joue de cochon braisée/14.3/burger1</item>
-        <item>Boeuf Normand et son jus/12/burger2</item>
-        <item>Turbot rôti, crème de petits pois/13/burger1</item>
+        <item>Magret de canard du sud-ouest/12/duck</item>
+        <item>Joue de cochon braisée/14.3/joue</item>
+        <item>Boeuf Normand et son jus/12/boeuf</item>
+        <item>Turbot rôti, crème de petits pois/13/turbo</item>
 
     </string-array>
 
     <string-array name="entreeList">
-        <item>Cappuccino de butternuts aux noisettes/8/burger1</item>
-        <item>Oeuf mollet aux pleurotes/8/burger1</item>
-        <item>Charlotte d’asperges blanches au chèvre frais/7/burger1</item>
-        <item>Clafoutis d’avocat au Roquefort/9/burger1</item>
+        <item>Cappuccino de butternuts aux noisettes/8/butternut</item>
+        <item>Oeuf mollet aux pleurotes/8/oeuf</item>
+        <item>Charlotte d’asperges blanches au chèvre frais/7/charlotte</item>
+        <item>Clafoutis d’avocat au Roquefort/9/clafoutis</item>
 
     </string-array>
 
     <string-array name="dessertList">
 
-        <item>Sélection de fromages/1/burger1</item>
-        <item>Tartelette passion – chocolat au lait/8/burger1</item>
-        <item>Ananas rôti à la vanille de Madagascar/7/burger1</item>
-        <item>Fraises de Nîmes et rhubarbe/7/burger1</item>
-        <item>Le fameux Paris-Brest de Maxime/9/burger1</item>
+        <item>Sélection de fromages/1/from</item>
+        <item>Tartelette passion – chocolat au lait/8/tarte</item>
+        <item>Ananas rôti à la vanille de Madagascar/7/ananas</item>
+        <item>Fraises de Nîmes et rhubarbe/7/fraises</item>
+        <item>Le fameux Paris-Brest de Maxime/9/brest</item>
 
 
     </string-array>
 
     <string-array name="boissonList">
 
-        <item>Glengoyne 10 ans 4 cl/8/burger1</item>
-        <item>Pessac-Léognan/12/burger1</item>
-        <item>Coca/3/burger1</item>
-        <item>Jus digr/20/burger1</item>
+        <item>Glengoyne 10 ans 4 cl/8/sky</item>
+        <item>Pessac-Léognan/12/vin</item>
+        <item>Coca/3/coca</item>
 
     </string-array>
 </resources>

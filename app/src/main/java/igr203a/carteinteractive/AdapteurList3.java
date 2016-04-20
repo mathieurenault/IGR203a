@@ -16,6 +16,7 @@ import android.view.ViewGroup;
 import android.view.LayoutInflater;
 import android.widget.TextView;
 import android.widget.Button;
+import android.util.TypedValue;
 /**
  * Created by Gautier on 03/03/2015.
  */
@@ -23,13 +24,15 @@ import android.widget.Button;
 public class AdapteurList3 extends BaseAdapter implements ListAdapter {
     private ArrayList<String> list = new ArrayList<String>();
     private ArrayList<String> list2 = new ArrayList<String>();
+    private ArrayList<Integer> indiceTab = new ArrayList<Integer>();
     private Context context;
 
 
-    public AdapteurList3(ArrayList<String> list, Context context, ArrayList<String> list2) {
+    public AdapteurList3(ArrayList<String> list, Context context, ArrayList<String> list2, ArrayList<Integer> indiceTab) {
         this.list = list;
         this.context = context;
         this.list2=list2;
+        this.indiceTab=indiceTab;
     }
 
 
@@ -60,6 +63,8 @@ public class AdapteurList3 extends BaseAdapter implements ListAdapter {
 
         //Handle TextView and display string from your list
         TextView listItemText = (TextView)view.findViewById(R.id.nomProduit);
+
+
         String split[] = null;
         split = list.get(position).split("/");
         if (split.length > 1) {

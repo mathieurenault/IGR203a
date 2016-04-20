@@ -56,7 +56,7 @@
                 android:id="@+id/entreeButton"
                 android:text="Entrée"
                 android:background="@drawable/buttonshape2"
-                android:textColor="#FFFFFF"
+                android:textColor="#FF0000"
                 />
 
             <Button
