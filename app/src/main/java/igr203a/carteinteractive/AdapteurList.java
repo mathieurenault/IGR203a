@@ -79,7 +79,6 @@ public class AdapteurList extends BaseAdapter implements ListAdapter {
         ImageView image = (ImageView)view.findViewById(R.id.imageView);
         Resources resources = context.getResources();
         final int resourceId = resources.getIdentifier(split[2], "drawable", context.getPackageName());
-        Log.i("ressource", String.valueOf(resourceId));
         image.setImageResource(resourceId);
 
         //Handle buttons and add onClickListeners
