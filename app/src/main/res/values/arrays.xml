@@ -11,7 +11,6 @@
     </string-array>
 
     <string-array name="entreeList">
-        <item>Cappuccino de butternuts aux noisettes/8/butternut</item>
         <item>Oeuf mollet aux pleurotes/8/oeuf</item>
         <item>Charlotte d’asperges blanches au chèvre frais/7/charlotte</item>
         <item>Clafoutis d’avocat au Roquefort/9/clafoutis</item>
@@ -20,6 +19,7 @@
 
     <string-array name="dessertList">
 
+        <item>Cappuccino de butternuts aux noisettes/8/butternut</item>
         <item>Sélection de fromages/1/from</item>
         <item>Tartelette passion – chocolat au lait/8/tarte</item>
         <item>Ananas rôti à la vanille de Madagascar/7/ananas</item>
