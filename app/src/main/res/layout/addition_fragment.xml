@@ -7,7 +7,7 @@
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceLarge"
         android:text="Addition"
-        android:textSize="50dp"
+        android:textSize="40dp"
         android:id="@+id/textView3"
         android:layout_alignParentTop="true"
         android:textColor="#630202"
