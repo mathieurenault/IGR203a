@@ -254,7 +254,7 @@ public class AdditionFragment extends Fragment {
                 somme += Float.parseFloat(produit.split("/")[1]) * Float.parseFloat(quantiteTab.get(i));
             }
         }
-        total.setText(String.valueOf(somme) + " €");
+        total.setText(String.valueOf(Math.round(somme * 100.0) / 100.0) + " €");
 
         return somme;
     }

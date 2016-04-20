@@ -61,8 +61,6 @@ public class CommandeFragment extends Fragment {
             @Override
             public void onClick(View v) {
 
-
-
                 AlertDialog.Builder builder = new AlertDialog.Builder(getContext());
 
                 builder.setTitle("Confirmation");
@@ -71,6 +69,7 @@ public class CommandeFragment extends Fragment {
                 builder.setPositiveButton("OUI", new DialogInterface.OnClickListener() {
 
                     public void onClick(DialogInterface dialog, int which) {
+
                         if (commandList.size()>0) {
 
                             additionTab.clear();
@@ -228,7 +227,7 @@ public class CommandeFragment extends Fragment {
             i++;
             somme += Float.parseFloat(produit.split("/")[1]) * Float.parseFloat(uniteProduitList.get(i));
         }
-        total.setText(String.valueOf(somme) + " €");
+        total.setText(String.valueOf(Math.round(somme * 100.0) / 100.0) + " €");
 
         return somme;
     }
