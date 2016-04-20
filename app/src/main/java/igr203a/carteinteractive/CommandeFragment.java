@@ -178,11 +178,9 @@ public class CommandeFragment extends Fragment {
 
     public void updateAdapter(){
         SharedPreferences recupTableau = PreferenceManager.getDefaultSharedPreferences(this.getActivity());
-        System.out.println("PREMIER TEST ARRIVEE");
         int size = recupTableau.getInt("Status_size",0);
         commandList.clear();
         for(int i=0;i<size;i++){
-            System.out.println("TESTARRIVE " + recupTableau.getString("Status_" + i,null));
 
             commandList.add(recupTableau.getString("Status_" + i, null));
         }

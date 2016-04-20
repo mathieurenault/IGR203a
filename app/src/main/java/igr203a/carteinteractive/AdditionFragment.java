@@ -152,9 +152,7 @@ public class AdditionFragment extends Fragment {
                     quantiteTab.add(tabCommand.getString("Status_2" + (i+1), null));
 
                 }
-                for (int j = 0; j < produitTab.size(); j++) {
-                    System.out.println("ON EST ARRIVE " + produitTab.get(j) + " " + quantiteTab.get(j));
-                }
+
             }
         }
 
@@ -190,9 +188,7 @@ public class AdditionFragment extends Fragment {
             }
         }
 
-        for (int k = 0; k < indiceTab.size(); k++) {
-            System.out.println("T   E    S    T " + indiceTab.get(k));
-        }
+
 
         if (indiceTab.size() == 1) {
             for (int i = 0; i < size2; i++) {
@@ -229,11 +225,7 @@ public class AdditionFragment extends Fragment {
 
                 }
 
-                for (int j = 0; j < produitTab.size(); j++) {
 
-                    System.out.println("ON EST ARRIVE " + produitTab.get(j) + " " + quantiteTab.get(j));
-
-                }
 
 
             }

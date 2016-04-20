@@ -1,11 +1,14 @@
 package igr203a.carteinteractive;
 
 import android.app.Activity;
+import android.app.AlertDialog;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
 import android.support.v4.app.Fragment;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -32,6 +35,7 @@ public class CarteFragment extends Fragment implements AdapteurList.AdapterInter
     private Button platButton = null;
     private Button dessertButton = null;
     private Button boissonButton = null;
+    private Button serveurButton = null;
     private AdapteurList adapter = null;
     private ArrayList<String> test2 = null;
     FragmentInterface mCallback;
@@ -74,6 +78,44 @@ public class CarteFragment extends Fragment implements AdapteurList.AdapterInter
         platButton = (Button) rootView.findViewById(R.id.platButton);
         dessertButton = (Button) rootView.findViewById(R.id.dessertButton);
         boissonButton = (Button) rootView.findViewById(R.id.boissonButton);
+        serveurButton = (Button) rootView.findViewById(R.id.serveurButton);
+
+        serveurButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // Le premier paramètre est le nom de l'activité actuelle
+                // Le second est le nom de l'activité de destination
+                AlertDialog.Builder builder = new AlertDialog.Builder(getContext());
+
+                builder.setTitle("Confirmation");
+                builder.setMessage("Appeler le serveur ?");
+
+                builder.setPositiveButton("OUI", new DialogInterface.OnClickListener() {
+
+                    public void onClick(DialogInterface dialog, int which) {
+
+                        Toast.makeText(getActivity(), "Serveur appelé ! Merci de patienter...", Toast.LENGTH_LONG).show();
+                    }
+
+                });
+
+                builder.setNegativeButton("NON", new DialogInterface.OnClickListener() {
+
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        // Do nothing
+                        dialog.dismiss();
+                    }
+                });
+
+                AlertDialog alert = builder.create();
+                alert.show();
+
+
+
+
+            }
+        });
 
         entreeButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -84,7 +126,6 @@ public class CarteFragment extends Fragment implements AdapteurList.AdapterInter
                 test2.clear();
                 String[] split = null;
                 for(int i=0;i<test3.size();i++){
-                    System.out.println(test3.get(i));
                     split = test3.get(i).split("/");
                     //test2.add(i,split[0] + " (" + split[1] + " €)");
                     test2.add(i,test3.get(i));
@@ -105,7 +146,7 @@ public class CarteFragment extends Fragment implements AdapteurList.AdapterInter
                 test2.clear();
                 String[] split = null;
                 for(int i=0;i<test3.size();i++){
-                    System.out.println(test3.get(i));
+
                     split = test3.get(i).split("/");
                     //test2.add(i,split[0] + " (" + split[1] + " €)");
                     test2.add(i,test3.get(i));
@@ -130,7 +171,7 @@ public class CarteFragment extends Fragment implements AdapteurList.AdapterInter
                 ArrayList<String> test3 = new ArrayList<String>(Arrays.asList(getResources().getStringArray(R.array.dessertList)));
                 String[] split = null;
                 for(int i=0;i<test3.size();i++){
-                    System.out.println(test3.get(i));
+
                     split = test3.get(i).split("/");
                     //test2.add(i,split[0] + " (" + split[1] + " €)");
                     test2.add(i,test3.get(i));
@@ -149,7 +190,7 @@ public class CarteFragment extends Fragment implements AdapteurList.AdapterInter
                 ArrayList<String> test3 = new ArrayList<String>(Arrays.asList(getResources().getStringArray(R.array.boissonList)));
                 String[] split = null;
                 for(int i=0;i<test3.size();i++){
-                    System.out.println(test3.get(i));
+
                     split = test3.get(i).split("/");
                     //test2.add(i,split[0] + " (" + split[1] + " €)");
                     test2.add(i,test3.get(i));

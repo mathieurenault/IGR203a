@@ -9,7 +9,7 @@
         android:textAppearance="?android:attr/textAppearanceLarge"
         android:text="Notre Carte"
         android:textAlignment="center"
-        android:textSize="50dp"
+        android:textSize="25dp"
         android:textColor="#630202"
         android:id="@+id/textView"
         android:layout_gravity="center"
@@ -17,19 +17,34 @@
         android:layout_marginTop="5dp"
         android:layout_marginBottom="5dp"/>
 
+    <igr203a.carteinteractive.BButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/serveurButton"
+        android:text="Appel Serveur"
+        android:background="@drawable/buttonshape"
+        android:drawableLeft="@drawable/waitericon"
+        android:textColor="#630202"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true"
+        />
+
+
+
     <LinearLayout
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         android:id="@+id/centralLayout"
-        android:layout_above="@+id/serveurButton"
-        android:layout_below="@+id/textView">
+        android:layout_below="@+id/serveurButton"
+        >
 
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:orientation="vertical"
-            android:id="@+id/ChoixLayout">
+            android:id="@+id/ChoixLayout"
+            android:layout_gravity="center_vertical">
 
 
             <Button
@@ -39,7 +54,6 @@
                 android:text="Entrée"
                 android:background="@drawable/buttonshape2"
                 android:textColor="#FFFFFF"
-                android:layout_marginTop="50dp"
                 />
 
             <Button
@@ -83,16 +97,7 @@
 
 
 
-    <igr203a.carteinteractive.BButton
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/serveurButton"
-        android:text="Appel Serveur"
-        android:background="@drawable/buttonshape"
-        android:drawableLeft="@drawable/waitericon"
-        android:textColor="#630202"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
-        />
+
+
 
 </RelativeLayout>
