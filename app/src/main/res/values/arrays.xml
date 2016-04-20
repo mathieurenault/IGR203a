@@ -2,37 +2,37 @@
 
 <resources>
     <string-array name="entreeList">
-        <item>Entrée 1/2</item>
-        <item>Entrée 2/4.3</item>
-        <item>Entrée 3/2</item>
-        <item>Entrée 4/1</item>
+        <item>Entrée 1/2/burger1</item>
+        <item>Entrée 2/4.3/burger2</item>
+        <item>Entrée 3/2/burger1</item>
+        <item>Entrée 4/1/burger2</item>
 
     </string-array>
 
     <string-array name="platList">
-        <item>Plat 1/10</item>
-        <item>Plat 2/8</item>
-        <item>Plat 3/1</item>
-        <item>Plat 4/2</item>
-        <item>BOEUF BOURGUIGNON/2</item>
-        <item>Giano/0.5</item>
-        <item>Soeur de Prush/0</item>
+        <item>Plat 1/10/burger1</item>
+        <item>Plat 2/8/burger2</item>
+        <item>Plat 3/1/burger1</item>
+        <item>Plat 4/2/burger2</item>
+        <item>BOEUF BOURGUIGNON/2/burger1</item>
+        <item>Giano/0.5/burger2</item>
+        <item>Soeur de Prush/0/burger1</item>
 
     </string-array>
 
     <string-array name="dessertList">
-        <item>Dessert 1/1</item>
-        <item>Dessert 2/2</item>
-        <item>Dessert 3/3</item>
-        <item>Dessert 4/2</item>
+        <item>Dessert 1/1/burger1</item>
+        <item>Dessert 2/2/burger2</item>
+        <item>Dessert 3/3/burger1</item>
+        <item>Dessert 4/2/burger2</item>
 
     </string-array>
 
     <string-array name="boissonList">
-        <item>Boisson 1/2</item>
-        <item>Boisson 2/3</item>
-        <item>Boisson 3/1</item>
-        <item>Boisson 4/4</item>
+        <item>Boisson 1/2/burger1</item>
+        <item>Boisson 2/3/burger2</item>
+        <item>Boisson 3/1/burger1</item>
+        <item>Boisson 4/4/burger2</item>
 
     </string-array>
 </resources>

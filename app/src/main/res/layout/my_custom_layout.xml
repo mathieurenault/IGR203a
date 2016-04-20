@@ -4,13 +4,26 @@
     android:layout_height="match_parent"
     >
 
+
+    <ImageView
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:id="@+id/imageView"
+        android:layout_centerVertical="true"
+        android:layout_alignParentLeft="true"
+        android:paddingLeft="8dp"
+        android:layout_marginBottom="8dp"
+        android:src="@drawable/test"/>
+
     <TextView
         android:id="@+id/list_item_string"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerVertical="true"
-        android:layout_alignParentLeft="true"
+        android:layout_toRightOf="@+id/imageView"
+        android:layout_toEndOf="@+id/imageView"
         android:paddingLeft="8dp"
+        android:text="test"
         android:textSize="18sp"
         android:textStyle="bold" />
 
@@ -24,7 +37,6 @@
         android:text="Ajouter"
         android:background="@android:color/transparent"
         android:textColor="#b6964c"/>
-
 
 
 </RelativeLayout>

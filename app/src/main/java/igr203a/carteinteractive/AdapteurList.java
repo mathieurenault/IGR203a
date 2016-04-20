@@ -2,8 +2,11 @@ package igr203a.carteinteractive;
 
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.content.res.Resources;
 import android.preference.PreferenceManager;
+import android.util.Log;
 import android.widget.BaseAdapter;
+import android.widget.ImageView;
 import android.widget.ListAdapter;
 import java.lang.Object;import java.lang.Override;import java.lang.String;import java.util.ArrayList;
 import android.content.Context;
@@ -73,6 +76,12 @@ public class AdapteurList extends BaseAdapter implements ListAdapter {
         split = list.get(position).split("/");
         listItemText.setText(split[0] + " (" + split[1] + " €)");
 
+        ImageView image = (ImageView)view.findViewById(R.id.imageView);
+        Resources resources = context.getResources();
+        final int resourceId = resources.getIdentifier(split[2], "drawable", context.getPackageName());
+        Log.i("ressource", String.valueOf(resourceId));
+        image.setImageResource(resourceId);
+
         //Handle buttons and add onClickListeners
         Button addButton = (Button)view.findViewById(R.id.add_btn);
         //Button addBtn = (Button)view.findViewById(R.id.add_btn);
@@ -80,18 +89,6 @@ public class AdapteurList extends BaseAdapter implements ListAdapter {
         addButton.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v) {
-                //do something
-                /*list.remove(position);
-                SharedPreferences recupTableau = PreferenceManager.getDefaultSharedPreferences(context);
-                SharedPreferences.Editor recupTableauEditor = recupTableau.edit();
-                recupTableauEditor.remove("Status_" + position);
-                for(int i=position;i<recupTableau.getInt("Status_size",0);i++){
-                    recupTableauEditor.putString("Status_" + i, recupTableau.getString("Status_" + (i+1),null));
-                }
-                recupTableauEditor.putInt("Status_size", recupTableau.getInt("Status_size",0)-1);
-                recupTableauEditor.commit();
-                //or some other task
-                notifyDataSetChanged();*/
 
                 SharedPreferences nomP = PreferenceManager.getDefaultSharedPreferences(context);
                 SharedPreferences.Editor nomPEditor = nomP.edit();
@@ -150,7 +147,6 @@ public class AdapteurList extends BaseAdapter implements ListAdapter {
 
 
         });
-
 
         return view;
     }
